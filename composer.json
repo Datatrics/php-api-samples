@@ -1,0 +1,20 @@
+{
+  "name": "datatrics/php-api-samples",
+  "description": "Datattrics PHP API samples",
+  "keywords": ["datatrics", "datatrics.com", "api", "php-api", "php-sdk"],
+  "license": "MIT",
+  "authors": [{
+    "name": "Nico Borghuis",
+    "email": "nico@datatrics.com"
+  }, {
+    "name": "Bas Nieland",
+    "email": "bas@datatrics.com"
+  }, {
+    "name": "Pepijn Yben",
+    "email": "pepijn@datatrics.com"
+  }],
+  "require": {
+    "datatrics/php-api": "2.0.x-dev",
+    "fzaninotto/faker": "^1.6"
+  }
+}
