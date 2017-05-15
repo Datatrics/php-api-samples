@@ -1,0 +1,6 @@
+<?php
+
+// This document contains the credentials for the Datatrics REST-API.
+
+$apiKey = ' ';
+$projectId = '';

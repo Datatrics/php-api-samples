@@ -11,6 +11,7 @@ composer install -o
 ```
 
 ## Usage
+Copy the contents of config.php.dist to config.php and fill the apiKey and projectId variables.
 
 ``` php
 <?php

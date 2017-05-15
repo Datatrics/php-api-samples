@@ -2,8 +2,7 @@
 
 require_once(__DIR__."/vendor/autoload.php");
 
-$apiKey = '';
-$projectId = '';
+require_once __DIR__.'/config.php';
 
 $api = new Datatrics\API\Client($apiKey, $projectId);
 
@@ -18,7 +17,9 @@ $sale = [
     "conversion" => [
         "profileid" => "profile-0",
         "total" => $faker->randomNumber(2),
-        "status" => "",
+        "status" => "orderstate",
+        "created" => date('Y-m-d H:i:s', $faker->unixTime),
+        "updated" => date('Y-m-d H:i:s'),
         "items" => [
             [
                 "itemid" => "content-0",
@@ -37,7 +38,7 @@ print_r($sale);
 echo "</pre>";
 
 $sales = [];
-for ($i=0;$i<=10;$i++) {
+for ($i=1;$i<=10;$i++) {
     $faker->seed($i);
     $sales[] = [
         "projectid" => $projectId,
@@ -48,6 +49,8 @@ for ($i=0;$i<=10;$i++) {
             "profileid" => "profile-".$i,
             "total" => $faker->randomNumber(2),
             "status" => "orderstate",
+            "created" => date('Y-m-d H:i:s', $faker->unixTime),
+            "updated" => date('Y-m-d H:i:s'),
             "items" => [
                 [
                     "itemid" => "content-".$i,

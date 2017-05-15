@@ -2,8 +2,7 @@
 
 require_once(__DIR__."/vendor/autoload.php");
 
-$apiKey = '';
-$projectId = '';
+require_once __DIR__.'/config.php';
 
 $api = new Datatrics\API\Client($apiKey, $projectId);
 
@@ -38,13 +37,13 @@ $profile = [
         "gender" => $gender
     ]
 ];
-#$profile = $api->Profile->Create($profile);
+$profile = $api->Profile->Create($profile);
 echo "<pre>";
 print_r($profile);
 echo "</pre>";
 
 $profiles = [];
-for ($i=0;$i<=10;$i++) {
+for ($i=1;$i<=10;$i++) {
     $faker->seed($i);
     $profiles[] = [
         "projectid" => $projectId,
@@ -73,7 +72,7 @@ for ($i=0;$i<=10;$i++) {
         ]
     ];
 }
-#$profiles = $api->Profile->Bulk($profiles);
+$profiles = $api->Profile->Bulk($profiles);
 echo "<pre>";
 print_r($profiles);
 echo "</pre>";

@@ -10,3 +10,8 @@ composer.phar
 /.vs
 coverage.clover
 /build/logs/clover.xml
+Behavior.php
+Bucket.php
+config.php
+Interaction.php
+Scorecard.php
