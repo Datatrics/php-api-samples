@@ -14,7 +14,7 @@
     "email": "pepijn@datatrics.com"
   }],
   "require": {
-    "datatrics/php-api": "2.0.x-dev",
+    "datatrics/php-api": "2.0.*",
     "fzaninotto/faker": "^1.6"
   }
 }
